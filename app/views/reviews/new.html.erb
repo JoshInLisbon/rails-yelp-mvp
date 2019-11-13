@@ -1,0 +1,15 @@
+<h1>✏️ <i>New review for <%= @restaurant.name %></i></h1>
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating %>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
+
+<!-- create_table "reviews", force: :cascade do |t|
+  t.string "content"
+  t.integer "rating"
+  t.integer "restaurant_id"
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+  t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
+end -->
